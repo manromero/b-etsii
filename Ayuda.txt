@@ -1,0 +1,37 @@
+# Comandos de ayuda:
+
+# Crea proyecto react con ts
+create-react-app e-odontology --scripts-version=react-scripts-ts
+
+# Añadir sass al proyecto
+# dev solo se añadirán las dependencias a desarrollo
+npm i --save-dev node-sass
+
+# añdir
+npm install npm-run-all --save-dev
+
+# añadir estos comandos a nuestro package.json
+"start": "npm-run-all -p watch-css start-js",
+"start-js": "react-scripts-ts start",
+"build": "npm run build-css && react-scripts-ts build",
+"test": "react-scripts-ts test --env=jsdom",
+"eject": "react-scripts-ts eject",
+"build-css": "node-sass --include-path ./node_modules src/assets/scss -o ./src/assets/css --recursive",
+"watch-css": "npm run build-css && node-sass --include-path ./node_modules src/assets/scss -o src/assets/css --watch --recursive"
+
+# instalar bootstrap
+npm install --save-dev bootstrap-scss
+# se pude importar en fichero scss con @import "bootstrap-scss/bootstrap";
+
+# para quitar regla order css
+"rules": {
+	"ordered-imports": false
+},
+
+# Importar fuentes e iconos desde public
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+
+# Instalar fuentes a través de componentes de react, recomendado para iconos
+npm i --save @fortawesome/fontawesome-svg-core
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/react-fontawesome
