@@ -1,19 +1,28 @@
 import * as React from 'react';
-import './App.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStroopwafel } from '@fortawesome/free-solid-svg-icons';
 
-import logo from './logo.svg';
+library.add(faStroopwafel)
 
-class App extends React.Component {
+class App extends React.Component<{}, {selected: boolean}> {
+
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      selected: false
+    };
+  }
+
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+      <div>
+        {this.state.selected ?  
+          <div>This is my favorite Food: <FontAwesomeIcon icon="stroopwafel" /> </div>
+          : 
+          <div>This is not my Food: <FontAwesomeIcon icon="stroopwafel" /> </div>
+        }
+        <button type="button" onClick={() => this.setState({selected: !this.state.selected})} className="btn btn-success">Success</button>
       </div>
     );
   }
