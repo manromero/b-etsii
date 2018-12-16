@@ -1,10 +1,5 @@
 import * as React from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStroopwafel } from '@fortawesome/free-solid-svg-icons';
-import PatientDetail from './components/PatientDetail';
-
-library.add(faStroopwafel)
+import MinEventGroup from './components/MinEventGroup';
 
 class App extends React.Component<{}, {selected: boolean}> {
 
@@ -18,14 +13,7 @@ class App extends React.Component<{}, {selected: boolean}> {
   public render() {
     return (
       <div className="container">
-        <PatientDetail />
-
-        {/* {this.state.selected ?  
-          <div>This is my favorite Food: <FontAwesomeIcon icon="stroopwafel" /> </div>
-          : 
-          <div>This is not my Food: <FontAwesomeIcon icon="stroopwafel" /> </div>
-        }
-        <button type="button" onClick={() => this.setState({selected: !this.state.selected})} className="btn btn-success">Success</button> */}
+        <MinEventGroup />
       </div>
     );
   }
