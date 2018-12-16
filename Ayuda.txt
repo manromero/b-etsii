@@ -1,7 +1,7 @@
 # Comandos de ayuda:
 
 # Crea proyecto react con ts
-create-react-app e-odontology --scripts-version=react-scripts-ts
+create-react-app b-etsii --scripts-version=react-scripts-ts
 
 # Añadir sass al proyecto
 # dev solo se añadirán las dependencias a desarrollo
