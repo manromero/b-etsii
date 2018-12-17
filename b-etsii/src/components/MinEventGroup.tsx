@@ -6,25 +6,32 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 
 library.add(faChevronLeft, faChevronRight)
 
-class MinEventGroup extends React.Component<{}, {}> {
+class MinEventGroup extends React.Component<{}, {showLRIcons: boolean}> {
+
+    constructor(props: {}){
+        super(props);
+        this.state = {
+            showLRIcons: false
+        };
+    }
 
     public render() {
         return (
-            <div className="row">
-                <div className="col d-flex align-items-center">
-                    <FontAwesomeIcon className="cPointer" icon="chevron-left" />
+            <div className="d-flex flex-row bd-highlight mb-3 align-items-center" onMouseOut={() => this.setState({showLRIcons: false})} onMouseOver={() => this.setState({showLRIcons: true})}>
+                <div className="p-2 bd-highlight">
+                    <FontAwesomeIcon size="5x" className={this.state.showLRIcons ? 'cPointer' : 'cPointer hidden'} icon="chevron-left" />
                 </div>
-                <div className="col">
+                <div className="p-2 bd-highlight">
                     <MinEvent />
                 </div>
-                <div className="col">
+                <div className="p-2 bd-highlight">
                     <MinEvent />
                 </div>
-                <div className="col">
+                <div className="p-2 bd-highlight">
                     <MinEvent />
                 </div>
-                <div className="col d-flex align-items-center">
-                    <FontAwesomeIcon className="cPointer" icon="chevron-right" />
+                <div className="p-2 bd-highlight">
+                    <FontAwesomeIcon size="5x" className={this.state.showLRIcons ? 'cPointer' : 'cPointer hidden'} icon="chevron-right" />
                 </div>
             </div>
         );
