@@ -6323,3 +6323,19 @@ a.text-dark:hover, a.text-dark:focus {
 
 .cPointer {
   cursor: pointer; }
+
+.minEventGroupWrapper {
+  max-width: 100%;
+  position: relative; }
+
+.clearfix {
+  overflow: scroll;
+  zoom: 1;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+.wrapperIcon {
+  position: absolute;
+  top: 150px;
+  z-index: 99;
+  width: 100%; }

@@ -17,3 +17,23 @@
 .cPointer {
     cursor: pointer;
 }
+
+.minEventGroupWrapper {
+    max-width:100%;
+    // padding:50px 75px 50px 45px;
+    position:relative;
+}
+
+.clearfix {
+    overflow: scroll;
+    zoom: 1;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+.wrapperIcon {
+    position: absolute;
+    top: 150px;
+    z-index: 99;
+    width: 100%;
+}

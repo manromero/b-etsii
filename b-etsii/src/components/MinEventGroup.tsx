@@ -17,21 +17,32 @@ class MinEventGroup extends React.Component<{}, {showLRIcons: boolean}> {
 
     public render() {
         return (
-            <div className="d-flex flex-row bd-highlight mb-3 align-items-center" onMouseOut={() => this.setState({showLRIcons: false})} onMouseOver={() => this.setState({showLRIcons: true})}>
-                <div className="p-2 bd-highlight">
+            <div className="minEventGroupWrapper" onMouseOut={() => this.setState({showLRIcons: false})} onMouseOver={() => this.setState({showLRIcons: true})}>
+                <div className="wrapperIcon">
                     <FontAwesomeIcon size="5x" className={this.state.showLRIcons ? 'cPointer' : 'cPointer hidden'} icon="chevron-left" />
                 </div>
-                <div className="p-2 bd-highlight">
-                    <MinEvent />
+                <div className="d-flex flex-row bd-highlight mb-3 align-items-center clearfix">
+                    <div className="p-2 bd-highlight">
+                        <MinEvent />
+                    </div>
+                    <div className="p-2 bd-highlight">
+                        <MinEvent />
+                    </div>
+                    <div className="p-2 bd-highlight">
+                        <MinEvent />
+                    </div>
+                    <div className="p-2 bd-highlight">
+                        <MinEvent />
+                    </div>
+                    <div className="p-2 bd-highlight">
+                        <MinEvent />
+                    </div>
+                    <div className="p-2 bd-highlight">
+                        <MinEvent />
+                    </div>
                 </div>
-                <div className="p-2 bd-highlight">
-                    <MinEvent />
-                </div>
-                <div className="p-2 bd-highlight">
-                    <MinEvent />
-                </div>
-                <div className="p-2 bd-highlight">
-                    <FontAwesomeIcon size="5x" className={this.state.showLRIcons ? 'cPointer' : 'cPointer hidden'} icon="chevron-right" />
+                <div className="wrapperIcon">
+                    <FontAwesomeIcon size="5x" className={this.state.showLRIcons ? 'cPointer float-right' : 'cPointer float-right hidden'} icon="chevron-right" />
                 </div>
             </div>
         );
