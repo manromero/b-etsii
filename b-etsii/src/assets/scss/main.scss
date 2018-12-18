@@ -26,9 +26,16 @@
 
 .clearfix {
     overflow: scroll;
-    zoom: 1;
     overflow-x:hidden;
+    // overflow-x: auto; for testing
     overflow-y:hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.clearfix > div {
+    display: inline-block;
+    float: none;
 }
 
 .wrapperIcon {
@@ -36,4 +43,8 @@
     top: 150px;
     z-index: 99;
     width: 100%;
+}
+
+.w-30 {
+    width: 300px !important;
 }
